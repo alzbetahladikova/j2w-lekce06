@@ -10,6 +10,11 @@
 <div class="container">
     <form class="kosik" action="/cokolada" method="post">
         <h1>Objednávka čokolády</h1>
+
+
+
+
+
         <!--
         Formulář bude obsahovat:
         * výběr z druhů čokolády, např.: mléčná, bíla, hořká (select)

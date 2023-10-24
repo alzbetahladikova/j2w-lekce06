@@ -19,6 +19,7 @@ public class RocniObdobiController {
           .addObject("form", new RocniObdobiForm());
  }
 
+ //tyto dělají skoroto totéž, ale nepotřebuji ModelAndView
  @PostMapping("")
  public String post(@ModelAttribute("form") RocniObdobiForm form) {
   return "rocni-obdobi";
