@@ -1,10 +1,21 @@
 package cz.czechitas.java2webapps.lekce6.controller.cokolada;
 
+import jakarta.validation.constraints.AssertTrue;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+
 public class CokoladaForm {
 
+    @NotBlank
     private String druh;
+
+    @NotBlank
+    private String typ;
+    @NotBlank
     private String jmenoPrijmeni;
-    private String  email;
+    @Email
+    private String email;
+    @AssertTrue
     private boolean obchodniPodminky;
 
     public String getDruh() {
@@ -13,6 +24,14 @@ public class CokoladaForm {
 
     public void setDruh(String druh) {
         this.druh = druh;
+    }
+
+    public String getTyp() {
+        return typ;
+    }
+
+    public void setTyp(String typ) {
+        this.typ = typ;
     }
 
     public String getJmenoPrijmeni() {
