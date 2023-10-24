@@ -12,35 +12,34 @@
     <form class="kosik" action="/cokolada" method="post">
         <h1>Objednávka čokolády</h1>
 
-        <label for="druh" class="radek">Druh:</label>
-        [@spring.formSingleSelect path="form.druh" options={
+        <label for="zbozi" class="radek">Zboží:</label>
+        [@spring.formSingleSelect path="form.zbozi" options={
         "": "",
         "1": "Milka",
         "2": "Orion",
         "3": "Lindor",
         "4": "Tobleronka",
-        "5": "Karlova Koruna",
+        "5": "Karlova Koruna"
         } /]
         <div class="error">[@spring.showErrors "<br>"/]</div>
 
-        <div class="radek">Typ:</div>
+        <div class="radek">Druh:</div>
         <div class="skupina">
             <div>
-                <input id="typ1" type="radio" name="typ" value="BILA"/>
-                <label for="typ1">bílá</label>
+                <input id="druh1" type="radio" name="druh" value="BILA"/>
+                <label for="druh1">bílá</label>
             </div>
             <div>
-                <input id="typ2" type="radio" name="typ" value="MLECNA"/>
-                <label for="typ2">mléčná</label>
+                <input id="druh2" type="radio" name="druh" value="MLECNA"/>
+                <label for="druh2">mléčná</label>
             </div>
             <div>
-                <input id="typ3" type="radio" name="typ" value="HORKA"/>
-                <label for="typ3">hořká</label>
+                <input id="druh3" type="radio" name="druh" value="HORKA"/>
+                <label for="druh3">hořká</label>
             </div>
         </div>
-        [@spring.bind "form.objem"/]
+        [@spring.bind "form.druh"/]
         <div class="error">[@spring.showErrors "<br>"/]</div>
-
 
         <label for="jmeno" class="radek">Jméno a příjmení:</label>
         [@spring.formInput path="form.jmeno" /]

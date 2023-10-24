@@ -11,7 +11,8 @@ import org.springframework.web.servlet.ModelAndView;
 import jakarta.validation.Valid;
 import java.util.Random;
 
-
+/**
+ */
 @Controller
 @RequestMapping("/cokolada")
 public class CokoladaController {
@@ -26,7 +27,6 @@ public class CokoladaController {
 
     @PostMapping("")
     public Object form(@Valid @ModelAttribute("form") CokoladaForm form, BindingResult bindingResult) {
-
 
         if (bindingResult.hasErrors()) {
             return "/cokolada/formular";

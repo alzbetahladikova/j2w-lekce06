@@ -7,39 +7,31 @@ import jakarta.validation.constraints.NotBlank;
 public class CokoladaForm {
 
     @NotBlank
-    private String druh;
-
+    private String zbozi;
     @NotBlank
-    private String typ;
-    @NotBlank
-    private String jmenoPrijmeni;
+    private String jmeno;
     @Email
     private String email;
     @AssertTrue
     private boolean obchodniPodminky;
 
-    public String getDruh() {
-        return druh;
+    @NotBlank
+    private CokolaEnum druh;
+
+    public String getZbozi() {
+        return zbozi;
     }
 
-    public void setDruh(String druh) {
-        this.druh = druh;
+    public void setZbozi(String zbozi) {
+        this.zbozi = zbozi;
     }
 
-    public String getTyp() {
-        return typ;
+    public String getJmeno() {
+        return jmeno;
     }
 
-    public void setTyp(String typ) {
-        this.typ = typ;
-    }
-
-    public String getJmenoPrijmeni() {
-        return jmenoPrijmeni;
-    }
-
-    public void setJmenoPrijmeni(String jmenoPrijmeni) {
-        this.jmenoPrijmeni = jmenoPrijmeni;
+    public void setJmeno(String jmeno) {
+        this.jmeno = jmeno;
     }
 
     public String getEmail() {
@@ -56,5 +48,12 @@ public class CokoladaForm {
 
     public void setObchodniPodminky(boolean obchodniPodminky) {
         this.obchodniPodminky = obchodniPodminky;
+    }
+    public CokolaEnum getDruh() {
+        return druh;
+    }
+
+    public void setDruh(CokolaEnum druh) {
+        this.druh = druh;
     }
 }
